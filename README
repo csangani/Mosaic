@@ -9,7 +9,7 @@ Installation
 1. Copy the following files and folders to your website root directory:
 	a. mosaic.js
 	b. mosaic.css
-	c. mosaic-style.css
+	c. mosaic.style.css
 	d. jquery.mousewheel.js
 	e. images
 	
@@ -19,7 +19,7 @@ Installation
 	<script src="jquery.mousewheel.js" type="text/javascript"></script>
 	<script src="mosaic.js" type="text/javascript"></script>
 	<link href="mosaic.css" rel="stylesheet" type="text/css">
-	<link href="mosaic-style.css" rel="stylesheet" type="text/css">
+	<link href="mosaic.style.css" rel="stylesheet" type="text/css">
 	
 4. Set up your content in the following manner:
 	<div id="mosaic-target"></div>
@@ -140,3 +140,154 @@ Sample Code
 	</body>
 </html>
 
+Mosaic Gallery
+==============
+
+Installation
+------------
+
+1. Install Mosaic.
+
+2. Add the following code to your header:
+	<link href="mosaic.gallery.css" rel="stylesheet" type="text/css">
+	<link href="mosaic.gallery.style.css" rel="stylesheet" type="text/css">
+	<script src="mosaic.gallery.js" type="text/javascript"></script>
+
+3. Add the following code to your header:
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#mosaic-target').mosaicgallery();
+		});
+	</script>
+	
+Parameters
+----------
+
+Parameters passed to the $().mosaicgallery() function can contain the following values:
+
+
+#	Parameter			Default				Description
+
+1	image				'.mosaic-gallery-image'		Selector for <img> object to be used as thumbnail.
+2	image_hd			'.mosaic-gallery-image-hd'	Selector for <a> object whose href value points to HD image.
+3	title				'.mosaic-gallery-title'		Selector for object whose contents are the title.
+4	desc				'.mosaic-gallery-desc'		Selector for object whose contents are the description.
+5	url				'.mosaic-gallery-url'		Selector for <a> object whose href value points to the relevant page.
+6	scale_image			true				Scale thumbnail to fit the cell.
+7	on_click			'lightbox'			Select action on clicking thumbnail.
+										Available options:
+											[lightbox] | [url]
+8	overlay_style			'bottom'			Position of overlay on thumbnail.
+										Available options:
+											[top] | [bottom] | [left] | [right] | [full]
+9	popup_overlay			true				Show full overlay on mouseenter.
+10	overlay_title			true				Always show the title, even if the overlay is hidden.
+										Not valid for overlay_style: 'full' or 'left' or 'right'.
+11	overlay_animation_speed		250				Speed of overlay pop / hide animation.
+12	lightbox_overlay		true				Show image information in lightbox.
+13	lightbox_overlay_style		'right'				Position of overlay in lightbox.
+										Available options:
+											[right] | [left]
+14	error_image			'images/error.gif'		Location of thumbnail error image.
+15	error_image_hd			'images/error-hd.gif'		Location of lightbox error image.
+16	lightbox_overlay_width		300				Width of lightbox overlay
+17	lightbox_transition_speed	400				Soeed of lightbox transitions.
+
+Sample Code
+-----------
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="jquery.js" type="text/javascript"></script>
+		<script src="jquery.ui.js" type="text/javascript"></script>
+		<script src="jquery.mousewheel.js" type="text/javascript"></script>
+		<script src="mosaic.js" type="text/javascript"></script>
+		<script src="mosaicgallery.js" type="text/javascript"></script>
+		<link href="mosaic.css" rel="stylesheet" type="text/css">
+		<link href="mosaic-style.css" rel="stylesheet" type="text/css">
+		<link href="mosaicgallery.css" rel="stylesheet" type="text/css">
+		<link href="mosaicgallery-style.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$('#mosaic-grid-target').mosaic({
+					source: $('#mosaic-grid-source'),
+					width: 1000,
+					height: 800,
+					min_rows: 1,
+					max_rows: 2,
+					columns: 3,
+					speed: 500,
+					interval: 2000,
+					spacing: 1,
+					remove_source: true,
+					alternate_columns: true,
+					orientation: 'horizontal',
+					easing: 'easeInOutQuart',
+					pause_animation: true,
+					autoplay: true,
+					loop_type: 'reverse',
+					random_columns: true
+				}).mosaicgallery({
+					scale_image: true,
+					overlay_style: 'top',
+					on_click: 'lightbox',
+					overlay_animation_speed: 250,
+					lightbox_overlay: true,
+					lightbox_overlay_style: 'left',
+					lightbox_transition_speed: 250,
+					popup_overlay: true,
+					overlay_title: true
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="mosaic-grid-target"></div>
+		<div id="mosaic-grid-source" style="display: none;">
+			<div class="mosaic-cell">
+				<img alt="Acura Concept" class="mosaic-gallery-image" src="images/1_thumb.jpg">
+				<div class="mosaic-gallery-title">Acura Concept</div>
+				<div class="mosaic-gallery-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at nulla
+					ac leo elementum mollis. Suspendisse at orci felis. Nulla luctus mi vel
+					sapien bibendum volutpat pretium magna cursus. Vestibulum urna sapien,
+					porta sit amet tincidunt vehicula, congue nec sapien. In scelerisque nulla
+					vitae enim vulputate sed venenatis lectus tincidunt. Nulla facilisi.</div>
+				<a class="mosaic-gallery-url" href="http://www.chiragsangani.com"></a>
+				<a class="mosaic-gallery-image-hd" href="images/1.jpg"></a>
+			</div>
+			<div class="mosaic-cell">
+				<img alt="Acura Concept" class="mosaic-gallery-image" src="images/2_thumb.jpg">
+				<div class="mosaic-gallery-title">Acura Concept</div>
+				<a class="mosaic-gallery-url" href="#"></a>
+				<a class="mosaic-gallery-image-hd" href="images/2.jpg"></a>
+			</div>
+			<div class="mosaic-cell">
+				<img alt="Acura Concept" class="mosaic-gallery-image" src="images/3_thumb.jpg">
+				<div class="mosaic-gallery-title">Acura Concept</div>
+				<div class="mosaic-gallery-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at nulla
+					ac leo elementum mollis. Suspendisse at orci felis. Nulla luctus mi vel
+					sapien bibendum volutpat pretium magna cursus. Vestibulum urna sapien,
+					porta sit amet tincidunt vehicula, congue nec sapien. In scelerisque nulla
+					vitae enim vulputate sed venenatis lectus tincidunt. Nulla facilisi.</div>
+				<a class="mosaic-gallery-url" href="http://www.chiragsangani.com"></a>
+				<a class="mosaic-gallery-image-hd" href="images/3.jpg"></a>
+			</div>
+			<div class="mosaic-cell">
+				<img alt="Acura Concept" class="mosaic-gallery-image" src="images/4_thumb.jpg">
+				<a class="mosaic-gallery-url" href="http://www.chiragsangani.com"></a>
+				<a class="mosaic-gallery-image-hd" href="images/4.jpg"></a>
+			</div>
+			<div class="mosaic-cell">
+				<img alt="Acura Concept" class="mosaic-gallery-image" src="images/5_thumb.jpg">
+				<div class="mosaic-gallery-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at nulla
+					ac leo elementum mollis. Suspendisse at orci felis. Nulla luctus mi vel
+					sapien bibendum volutpat pretium magna cursus. Vestibulum urna sapien,
+					porta sit amet tincidunt vehicula, congue nec sapien. In scelerisque nulla
+					vitae enim vulputate sed venenatis lectus tincidunt. Nulla facilisi.</div>
+				<a class="mosaic-gallery-url" href="http://www.chiragsangani.com"></a>
+				<a class="mosaic-gallery-image-hd" href="images/5.jpg"></a>
+			</div>
+		</div>
+	</body>
+</html>
