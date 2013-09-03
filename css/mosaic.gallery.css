@@ -1,0 +1,121 @@
+﻿/*
+
+Mosaic Gallery
+Dynamic Grid Gallery
+
+By Chirag Sangani	chiragsangani@live.com
+www.chiragsangani.com
+
+Do not modify this file.
+
+*/
+
+.mosaic-gallery-image-wrapper {
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.mosaic-gallery-overlay {
+	position: absolute;
+	display: block;
+	overflow: hidden;
+	max-height: 100%;
+	min-width: 100px;
+}
+.mosaic-gallery-overlay-hidden {
+	opacity:0;
+}
+.mosaic-gallery-overlay-contentwrapper {
+	overflow-x: hidden;
+}
+.mosaic-gallery-overlay-otitle {
+	position: absolute;
+}
+.mosaic-gallery-overlay-full, .mosaic-gallery-overlay-left, .mosaic-gallery-overlay-right {
+	height: 100%;
+}
+.mosaic-gallery-overlay-full, .mosaic-gallery-overlay-top, .mosaic-gallery-overlay-bottom {
+	width: 100%;
+}
+.mosaic-gallery-overlay-full, .mosaic-gallery-overlay-top, .mosaic-gallery-overlay-left, .mosaic-gallery-overlay-right {
+	top: 0;
+}
+.mosaic-gallery-overlay-full, .mosaic-gallery-overlay-top, .mosaic-gallery-overlay-left, .mosaic-gallery-overlay-bottom {
+	left: 0;
+}
+.mosaic-gallery-overlay-right {
+	right: 0;
+}
+.mosaic-gallery-overlay-bottom {
+	bottom: 0;
+}
+.mosaic-gallery-overlay-scrollbar {
+	display: block;
+	position: absolute;
+	top: 0px;
+}
+.mosaic-gallery-lightbox-wrapper {
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	clear: both;
+}
+.mosaic-gallery-lightbox-backdrop {
+	float: left;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+}
+.mosaic-gallery-lightbox-contentwrapper {
+	display: block;
+	position: relative;
+	z-index: 1001;
+	overflow: hidden;
+}
+.mosaic-gallery-lightbox-imagewrapper {
+	display: block;
+	position: absolute;
+	cursor: pointer;
+}
+.mosaic-gallery-lightbox-content-left {
+	left: 0;
+}
+.mosaic-gallery-lightbox-content-right {
+	right: 0;
+	text-align: left;
+}
+.mosaic-gallery-lightbox-imagewrapper-left {
+	right: 0;
+}
+.mosaic-gallery-lightbox-imagewrapper-right {
+	left: 0;
+}
+.mosaic-gallery-lightbox-content {
+	display: block;
+	position: absolute;
+	height: 100%;
+	overflow: auto;
+}
+.mosaic-gallery-lightbox-close {
+	position: absolute;
+	display: block;
+	right: 0;
+	top: 0;
+}
+.mosaic-gallery-lightbox-button {
+	height: 100%;
+	display: block;
+	position: absolute;
+	z-index: 1001;
+	cursor: default;
+	top: 0;
+}
+.mosaic-gallery-lightbox-button-p {
+	left: 0;
+}
+.mosaic-gallery-lightbox-button-n {
+	right: 0;
+}

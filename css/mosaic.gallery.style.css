@@ -1,0 +1,173 @@
+﻿/*
+
+Mosaic Gallery
+Dynamic Grid Gallery
+
+Version 1.0 Beta
+
+By Chirag Sangani	chiragsangani@live.com
+www.chiragsangani.com
+
+Modify this file as per your requirements
+
+*/
+
+/* Set thumbnail loading image */
+.mosaic-gallery-image-wrapper {
+	background: url('../images/loader.gif') #ddd no-repeat 50% 50%;
+}
+
+/* Thumbnail overlay style */
+.mosaic-gallery-overlay {
+	background: #fff;
+	color: #000;
+}
+
+/* Thumbnail overlay opacity when hidden */
+.mosaic-gallery-overlay-pressed {
+	opacity: 0.75;
+}
+
+/* Thumbnail overlay opacity when open */
+.mosaic-gallery-overlay-popped {
+	opacity:1;
+}
+
+/* Set margin-right to atleast -20px to hide browser scrollbar in thumbnail overlay */
+.mosaic-gallery-overlay-contentwrapper {
+	margin-right: -20px; /* To hide browser scrollbar */
+}
+
+/* Thumbnail overlay inner padding */
+.mosaic-gallery-overlay-content {
+	padding-right: 30px; /* Should be (padding you want) - (contentwrapper margin-right) */;
+	padding-left: 10px;
+}
+
+/*	Thumbnail overlay title. Left and right paddings not necessary */
+.mosaic-gallery-overlay-title {
+	padding: 10px 0 10px 0;
+}
+/* Thumbnail overlay title when hidden. Left and right paddings same as overlay-content. Top and bottom paddings same as overlay-title */
+.mosaic-gallery-overlay-otitle {
+	padding: 10px;
+}
+.mosaic-gallery-overlay-title, .mosaic-gallery-overlay-otitle {
+	text-transform: uppercase;
+	font-size: medium;
+}
+
+/* Thumbnail overlay title link style */
+.mosaic-gallery-overlay-title-link {
+	color: #993300;
+	text-decoration: none;
+}
+.mosaic-gallery-overlay-title-link:hover {
+	color: #000;
+}
+
+/* Thumbnail overlay description style */
+.mosaic-gallery-overlay-desc {
+	padding: 0 0 10px 0;
+	font-size:small;
+}
+
+/* Thumbnail overlay style description style when overlay_style: 'top' */
+.mosaic-gallery-overlay-desc-top {
+	padding: 10px 0 0 0;
+}
+
+/* Thumbnail overlay max width when overlay_style: 'left' or 'right' */
+.mosaic-gallery-overlay-left, .mosaic-gallery-overlay-right {
+	max-width: 33%;
+}
+
+/* Thumbnail overlay scrollbar style */
+.mosaic-gallery-overlay-scrollbar {
+	right: 2px;
+	width: 3px;
+	background: #999;
+}
+
+/* Lightbox backdrop style */
+.mosaic-gallery-lightbox-backdrop {
+	background: #000;
+	opacity: 0.75;
+}
+
+/* Lightbox style */
+.mosaic-gallery-lightbox-contentwrapper {
+	background: #000;
+}
+
+/* Lightbox image style */
+.mosaic-gallery-lightbox-imagewrapper-loading {
+	background: url('../images/loader-black.gif') #000 no-repeat 50% 50%;
+}
+
+/* Lightbox content style */
+.mosaic-gallery-lightbox-content {
+	background: #fff;
+}
+
+/* Lightbox content style for lightbox_overlay_style: 'left' */
+.mosaic-gallery-lightbox-content-left {
+	text-align: left;
+}
+
+/* Lightbox content inner padding */
+.mosaic-gallery-lightbox-content-innerwrapper {
+	margin: 20px;
+}
+
+/* Lightbox title style */
+.mosaic-gallery-lightbox-content-title {
+	padding-top: 20px;
+}
+
+/* Lightbox title link style */
+.mosaic-gallery-lightbox-content-title a {
+	color: #666;
+	font-size: large;
+	text-transform: uppercase;
+}
+.mosaic-gallery-lightbox-content-title a:hover {
+	color: #000;
+}
+
+/* Lightbox description style */
+.mosaic-gallery-lightbox-content-desc {
+	padding-top: 20px;
+}
+
+/* Lightbox close button */
+.mosaic-gallery-lightbox-close {
+	margin: 20px 20px;
+	background: url('../images/close.png') no-repeat;
+	width: 10px;
+	height: 9px;
+	opacity: 0.5;
+}
+.mosaic-gallery-lightbox-close:hover {
+	opacity: 1;
+}
+
+/* Lightbox navigation button style */
+.mosaic-gallery-lightbox-button {
+	width: 30px;
+	opacity: 0.5;
+	margin: 10px;
+}
+.mosaic-gallery-lightbox-button:hover {
+	opacity: 1;
+}
+
+/* Lightbox navigation button : left */
+.mosaic-gallery-lightbox-button-p {
+	background: url('../images/arrowlarge-l.png') no-repeat 50% 50%;
+}
+
+/* Lightbox navigation button : right */
+.mosaic-gallery-lightbox-button-n {
+	background: url('../images/arrowlarge-r.png') no-repeat 50% 50%;
+}

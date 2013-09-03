@@ -1,0 +1,61 @@
+﻿/*
+
+Mosaic
+Dynamic Grid
+
+Version 1.0 Beta
+
+By Chirag Sangani	chiragsangani@live.com
+www.chiragsangani.com
+
+Do not modify this file.
+
+*/
+.mosaic-column, .mosaic-inner-cell {
+	float: left;
+	display: block;
+	overflow: hidden;
+	position: relative;
+}
+.mosaic-grid-wrapper {
+	overflow: hidden;
+}
+.mosaic-column-button {
+	display: block;
+	position: absolute;
+}
+.mosaic-column-button-l, .mosaic-column-button-r {
+	height: 100%;
+	top: 0;
+}
+.mosaic-column-button-l {
+	left: 0;
+}
+.mosaic-column-button-r {
+	right: 0;
+}
+.mosaic-column-button-u, .mosaic-column-button-d {
+	width: 100%;
+	left: 0;
+}
+.mosaic-column-button-u {
+	top: 0;
+}
+.mosaic-column-button-d {
+	bottom: 0;
+}
+.mosaic-outer-columnwrapper {
+	position: relative;
+	display:block;
+	float:left;
+	overflow:hidden;
+}
+.mosaic-inner-columnwrapper {
+	overflow:hidden;
+}
+.mosaic-inner-columnwrapper-horizontal {
+	margin: 0 10px;
+}
+.mosaic-inner-columnwrapper-vertical {
+	margin: 10px 0 10px 0;
+}
